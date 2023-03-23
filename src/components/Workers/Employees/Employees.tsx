@@ -31,10 +31,12 @@ export const Employees = () => {
         }
 
         if(isArchive){
-            if(Number(isArchive)){
+            if(isArchive === '1'){
                 employees = employees.filter(employee => employee.isArchive)
-            }else {
+            }else if(isArchive === '0'){
                 employees = employees.filter(employee => !employee.isArchive)
+            }else {
+                employees = []
             }
         }
 
@@ -42,6 +44,10 @@ export const Employees = () => {
     }
 
     const byName = (field:string) => {
+        return (a:any, b:any) => a[field].toUpperCase() > b[field].toUpperCase() ? 1 : -1;
+    }
+
+    const byId = (field:string) => {
         return (a:any, b:any) => a[field] > b[field] ? 1 : -1;
     }
 
@@ -61,7 +67,7 @@ export const Employees = () => {
                 employees = employees.slice().sort(byBirthday(sort))
             }
         }else {
-            employees = employees.slice().sort(byName("id"))
+            employees = employees.slice().sort(byId("id"))
         }
 
         return employees
