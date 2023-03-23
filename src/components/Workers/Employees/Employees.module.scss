@@ -1,0 +1,7 @@
+.employees{
+  @apply w-full flex flex-col gap-y-4;
+}
+
+.error{
+  @apply text-center my-2 text-white font-bold sm:text-xl text-base;
+}

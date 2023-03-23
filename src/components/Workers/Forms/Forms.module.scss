@@ -1,0 +1,31 @@
+.heading{
+  @apply text-center my-1 text-lg text-red-600 font-bold;
+}
+
+.box{
+  @apply flex sm:flex-row flex-col justify-between mt-3 gap-y-3;
+
+  .inputs{
+    @apply flex flex-col gap-y-2 mx-3;
+
+    .input{
+      @apply w-48 border-b border-b-2 border-red-600 text-lg text-red-600 outline-none placeholder-red-600/[0.8];
+    }
+
+    .error{
+      @apply h-4 text-red-800
+    }
+  }
+
+  .select{
+    @apply h-[30px] text-red-600 text-sm py-0 #{!important};
+  }
+
+  .check{
+    @apply text-red-600 h-[30px] #{!important};
+  }
+
+  .btn{
+    @apply h-[30px] border-red-600 text-red-600 font-bold my-4 #{!important};
+  }
+}

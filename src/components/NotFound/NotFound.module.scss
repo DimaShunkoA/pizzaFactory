@@ -1,0 +1,15 @@
+.div1{
+  @apply w-full h-screen bg-red-600 text-white/80;
+
+  .div2{
+    @apply absolute my-10 px-20;
+
+    .text1{
+      @apply text-[165px] font-bold
+    }
+
+    .text2{
+      @apply text-3xl font-bold
+    }
+  }
+}

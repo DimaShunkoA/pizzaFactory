@@ -1,0 +1,11 @@
+.button{
+  @apply border-white text-white mx-1 text-xs #{!important};
+
+  &:hover{
+    @apply border-orange-300 #{!important};
+  }
+}
+
+.item{
+  @apply text-sm text-red-600 #{!important};
+}

@@ -1,0 +1,11 @@
+.button{
+  @apply border-white text-white mx-1 text-xs #{!important};
+
+  &:hover{
+    @apply border-orange-300 #{!important};
+  }
+}
+
+.modal{
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:w-[600px] w-[300px] bg-white border-red-600 border-4 p-4 rounded-md outline-none;
+}

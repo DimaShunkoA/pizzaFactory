@@ -1,0 +1,23 @@
+.button{
+  @apply border-white text-white mx-1 text-xs #{!important};
+
+  &:hover{
+    @apply border-orange-300 #{!important};
+  }
+}
+
+.post{
+  @apply mx-[10px] text-red-600 text-base mb-1
+}
+
+.select{
+  @apply h-[37px] mx-[10px] text-red-600 text-sm #{!important};
+}
+
+.check{
+  @apply text-red-600 #{!important};
+}
+
+.reset{
+  @apply w-[140px] mx-[10px] border-red-600 text-red-600 text-xs #{!important};
+}

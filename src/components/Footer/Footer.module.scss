@@ -1,0 +1,11 @@
+.footer{
+  @apply pb-4;
+
+  .div1{
+    @apply mx-auto container;
+
+    .div2{
+      @apply flex justify-between text-white md:text-xl text-sm border-t-4 border-white;
+    }
+  }
+}
