@@ -76,8 +76,6 @@ export const Filter = () => {
     };
 
     const reset = () => {
-        console.log(searchParams.get("isArchive"))
-        console.log(Boolean(searchParams.get("isArchive")))
         let sort = searchParams.get("sort")
         setPost("")
         setArchive({isArchive: false, isNotArchive: false})
@@ -94,6 +92,7 @@ export const Filter = () => {
     return (
         <div>
             <Button
+                data-testid="button"
                 className={styles.button}
                 variant="outlined"
                 aria-controls={open ? 'basic-menu' : undefined}
@@ -118,6 +117,7 @@ export const Filter = () => {
                         <FormControl sx={{ width: 160}}>
                             <Select
                                 sx={styleSelect}
+                                inputProps={{ "data-testid": "select"}}
                                 className={styles.select}
                                 value={post}
                                 onChange={handleChangeSelect}
@@ -135,14 +135,14 @@ export const Filter = () => {
                         <FormControlLabel
                             className={styles.check}
                             control={
-                                <Checkbox className={styles.check} checked={isArchive} onChange={handleChangeCheckBox} name="isArchive" />
+                                <Checkbox data-testid="isArchive" className={styles.check} checked={isArchive} onChange={handleChangeCheckBox} name="isArchive" />
                             }
                             label="В архиве"
                         />
                         <FormControlLabel
                             className={styles.check}
                             control={
-                                <Checkbox className={styles.check} checked={isNotArchive} onChange={handleChangeCheckBox} name="isNotArchive" />
+                                <Checkbox data-testid="isNotArchive" className={styles.check} checked={isNotArchive} onChange={handleChangeCheckBox} name="isNotArchive" />
                             }
                             label="Не в архиве"
                         />
@@ -150,7 +150,7 @@ export const Filter = () => {
 
                     <Divider sx={{my:"7px"}} />
 
-                    <Button className={styles.reset} variant="outlined" onClick={reset}>Сбросить</Button>
+                    <Button data-testid="reset" className={styles.reset} variant="outlined" onClick={reset}>Сбросить</Button>
                 </Box>
             </Menu>
         </div>

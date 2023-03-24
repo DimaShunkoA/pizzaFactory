@@ -12,7 +12,7 @@ import {useSelector} from "react-redux";
 import {IRootState} from "../../../index";
 
 export const AddWorker = () => {
-    const id = useSelector((state:IRootState) => state.employee.lastId)
+    const id = useSelector((state:IRootState) => state.employee.nextId)
 
     const [open, setOpen] = useState(false);
 

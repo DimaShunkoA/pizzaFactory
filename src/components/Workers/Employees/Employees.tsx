@@ -87,13 +87,13 @@ export const Employees = () => {
             {sortAndFilterEmployee.length ?
                 sortAndFilterEmployee.map((employee: People) => {
                     return(
-                        <div key={employee.id}>
+                        <div data-testid="employees" key={employee.id}>
                             <Employee employee={employee}/>
                         </div>
                     )
                 })
                 :
-                <div className={styles.error}>
+                <div data-testid="error" className={styles.error}>
                     Упс… Ничего не найдено. Давайте попробуем еще раз.
                 </div>
             }

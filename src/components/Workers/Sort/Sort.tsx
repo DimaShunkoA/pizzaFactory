@@ -48,6 +48,7 @@ export const Sort = () => {
     return (
         <div>
             <Button
+                data-testid="open"
                 className={styles.button}
                 variant="outlined"
                 aria-controls={open ? 'basic-menu' : undefined}
@@ -65,9 +66,9 @@ export const Sort = () => {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                <MenuItem sx={styleName } className={styles.item} onClick={() => sort("name")}>Сортировка по имени</MenuItem>
-                <MenuItem sx={styleBirthday} className={styles.item} onClick={() => sort("birthday")}>Сортировка по дате</MenuItem>
-                <MenuItem className={styles.item} onClick={() => sort("")}>Сбросить</MenuItem>
+                <MenuItem data-testid="name" sx={styleName } className={styles.item} onClick={() => sort("name")}>Сортировка по имени</MenuItem>
+                <MenuItem data-testid="birthday" sx={styleBirthday} className={styles.item} onClick={() => sort("birthday")}>Сортировка по дате</MenuItem>
+                <MenuItem data-testid="reset" className={styles.item} onClick={() => sort("")}>Сбросить</MenuItem>
             </Menu>
         </div>
     );

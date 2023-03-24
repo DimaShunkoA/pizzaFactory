@@ -266,7 +266,7 @@ export const Forms = ({employees, isAdd, handleClose}: IProps) => {
                             label="В архиве"
                         />
 
-                        <Button className={styles.btn} variant="outlined" type="submit">
+                        <Button data-testid="addOrEdit" className={styles.btn} variant="outlined" type="submit">
                             {isAdd ? <span>Добавить</span> : <span>Изменить</span>}
                         </Button>
                     </div>
